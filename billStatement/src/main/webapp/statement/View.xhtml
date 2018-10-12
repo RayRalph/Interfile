@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="StatementViewDlg" widgetVar="StatementViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewStatementTitle}">
+            <h:form id="StatementViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{statementController.selected != null}">
+                        <h:outputText value="#{bundle.ViewStatementLabel_id}"/>
+                        <h:outputText value="#{statementController.selected.id}" title="#{bundle.ViewStatementTitle_id}"/>
+                        <h:outputText value="#{bundle.ViewStatementLabel_statementId}"/>
+                        <h:outputText value="#{statementController.selected.statementId}" title="#{bundle.ViewStatementTitle_statementId}"/>
+                        <h:outputText value="#{bundle.ViewStatementLabel_accountId}"/>
+                        <h:outputText value="#{statementController.selected.accountId}" title="#{bundle.ViewStatementTitle_accountId}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="StatementViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

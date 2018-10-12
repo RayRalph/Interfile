@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statements>
+    <statement id="02988261-020928-9920">
+        <account>
+            <accountNumber>123456234567</accountNumber>
+            <accountHolderName>Testy Tester</accountHolderName>
+            <accountHolderIDNumber>8107085022087</accountHolderIDNumber>
+            <accountHolderDetails>
+                <contactDetails>
+                    <mobile>0833776712</mobile>
+                    <home/>
+                    <work/>
+                </contactDetails>
+                <addressDetails>
+                    <address>
+                        <line1>1 Main Road</line1>
+                        <line2>Rondebosch</line2>
+                        <line3/>
+                        <postalCode>0008</postalCode>
+                    </address>
+                </addressDetails>
+            </accountHolderDetails>
+            <bills>
+                <bill>
+                    <billDate>2018-09-01</billDate>
+                    <period>2018-09</period>
+                    <charges>100.00</charges>
+                    <outstanding>100.00</outstanding>
+                    <dueDate>2018-09-25</dueDate>
+                </bill>
+                <bill>
+                    <billDate>2018-08-01</billDate>
+                    <period>2018-08</period>
+                    <charges>100.00</charges>
+                    <outstanding>400.00</outstanding>
+                    <dueDate>2018-08-25</dueDate>
+                </bill>
+                <bill>
+                    <billDate>2018-07-01</billDate>
+                    <period>2018-07</period>
+                    <charges>100.00</charges>
+                    <outstanding>300.00</outstanding>
+                    <dueDate>2018-07-25</dueDate>
+                </bill>
+                <bill>
+                    <billDate>2018-06-01</billDate>
+                    <period>2018-06</period>
+                    <charges>100.00</charges>
+                    <outstanding>200.00</outstanding>
+                    <dueDate>2018-06-25</dueDate>
+                </bill>
+                <bill>
+                    <billDate>2018-05-01</billDate>
+                    <period>2018-05</period>
+                    <charges>100.00</charges>
+                    <outstanding>100.00</outstanding>
+                    <dueDate>2018-05-25</dueDate>
+                </bill>
+            </bills>
+        </account>
+    </statement>
+</statements>

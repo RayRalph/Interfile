@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="statements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="statement"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="statement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="account"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="account">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="accountNumber"/>
+        <xs:element ref="accountHolderName"/>
+        <xs:element ref="accountHolderIDNumber"/>
+        <xs:element ref="accountHolderDetails"/>
+        <xs:element ref="bills"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="accountNumber" type="xs:integer"/>
+  <xs:element name="accountHolderName" type="xs:string"/>
+  <xs:element name="accountHolderIDNumber" type="xs:integer"/>
+  <xs:element name="accountHolderDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="contactDetails"/>
+        <xs:element ref="addressDetails"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="contactDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mobile"/>
+        <xs:element ref="home"/>
+        <xs:element ref="work"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mobile" type="xs:integer"/>
+  <xs:element name="home" type="xs:string"/>
+  <xs:element name="work" type="xs:string"/>
+  <xs:element name="addressDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="address"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="address">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="line1"/>
+        <xs:element ref="line2"/>
+        <xs:element ref="line3"/>
+        <xs:element ref="postalCode"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="line1" type="xs:string"/>
+  <xs:element name="line2" type="xs:string"/>
+  <xs:element name="line3" type="xs:string"/>
+  <xs:element name="postalCode" type="xs:integer"/>
+  <xs:element name="bills">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="bill"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="billDate"/>
+        <xs:element ref="period"/>
+        <xs:element ref="charges"/>
+        <xs:element ref="outstanding"/>
+        <xs:element ref="dueDate"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="billDate" type="xs:date"/>
+  <xs:element name="period" type="xs:string"/>
+  <xs:element name="charges" type="xs:decimal"/>
+  <xs:element name="outstanding" type="xs:decimal"/>
+  <xs:element name="dueDate" type="xs:date"/>
+</xs:schema>

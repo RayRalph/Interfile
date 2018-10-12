@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statements>
+    <statement id="02988261-020928-9921">
+        <account>
+            <accountNumber>123456234567</accountNumber>
+            <accountHolderName>Testy Tester</accountHolderName>
+            <accountHolderIDNumber>8107085022087</accountHolderIDNumber>
+            <accountHolderDetails>
+                <contactDetails>
+                    <mobile>0824876902</mobile>
+                    <home>0119987726</home>
+                    <work>0118878292</work>
+                </contactDetails>
+                <addressDetails>
+                    <address>
+                        <line1>29 Aquila</line1>
+                        <line2>12 Main Road</line2>
+                        <line3>Bryanston</line3>
+                        <postalCode>2021</postalCode>
+                    </address>
+                </addressDetails>
+            </accountHolderDetails>
+            <bills>
+                <bill>
+                    <billDate>2018-09-01</billDate>
+                    <period>2018-09</period>
+                    <charges>100.00</charges>
+                    <outstanding>133.34</outstanding>
+                    <dueDate>2018-09-25</dueDate>
+                </bill>
+                <bill>
+                    <billDate>2018-08-01</billDate>
+                    <period>2018-08</period>
+                    <charges>100.00</charges>
+                    <outstanding>400.00</outstanding>
+                    <dueDate>2018-08-25</dueDate>
+                </bill>
+                <bill>
+                    <billDate>2018-07-01</billDate>
+                    <period>2018-07</period>
+                    <charges>100.00</charges>
+                    <outstanding>300.00</outstanding>
+                    <dueDate>2018-07-25</dueDate>
+                </bill>
+                <bill>
+                    <billDate>2018-06-01</billDate>
+                    <period>2018-06</period>
+                    <charges>100.00</charges>
+                    <outstanding>200.00</outstanding>
+                    <dueDate>2018-06-25</dueDate>
+                </bill>
+                <bill>
+                    <billDate>2018-05-01</billDate>
+                    <period>2018-05</period>
+                    <charges>100.00</charges>
+                    <outstanding>100.00</outstanding>
+                    <dueDate>2018-05-25</dueDate>
+                </bill>
+            </bills>
+        </account>
+    </statement>
+    <statement id="02988261-020928-9922">
+        <account>
+            <accountNumber>123456236567</accountNumber>
+            <accountHolderName>Joe Tester</accountHolderName>
+            <accountHolderIDNumber>8206055009085</accountHolderIDNumber>
+            <accountHolderDetails>
+                <contactDetails>
+                    <mobile>0824772652</mobile>
+                    <home/>
+                    <work/>
+                </contactDetails>
+                <addressDetails>
+                    <address>
+                        <line1>104 Aquila</line1>
+                        <line2>12 Main Road</line2>
+                        <line3>Bryanston</line3>
+                        <postalCode>2021</postalCode>
+                    </address>
+                </addressDetails>
+            </accountHolderDetails>
+            <bills>
+                <bill>
+                    <billDate>2018-09-01</billDate>
+                    <period>2018-09</period>
+                    <charges>150.00</charges>
+                    <outstanding>150.00</outstanding>
+                    <dueDate>2018-09-25</dueDate>
+                </bill>
+                <bill>
+                    <billDate>2018-08-01</billDate>
+                    <period>2018-08</period>
+                    <charges>200.00</charges>
+                    <outstanding>200.00</outstanding>
+                    <dueDate>2018-08-25</dueDate>
+                </bill>
+
+            </bills>
+        </account>
+    </statement>
+    <statement id="02988261-020928-9923">
+        <account>
+            <accountNumber>123456237876</accountNumber>
+            <accountHolderName>Sara Tester</accountHolderName>
+            <accountHolderIDNumber>7809120087083</accountHolderIDNumber>
+            <accountHolderDetails>
+                <contactDetails>
+                    <mobile>0824778602</mobile>
+                    <home/>
+                    <work/>
+                </contactDetails>
+                <addressDetails>
+                    <address>
+                        <line1>31 Aquila</line1>
+                        <line2>12 Main Road</line2>
+                        <line3>Bryanston</line3>
+                        <postalCode>2021</postalCode>
+                    </address>
+                </addressDetails>
+            </accountHolderDetails>
+            <bills>
+                <bill>
+                    <billDate>2018-07-01</billDate>
+                    <period>2018-07</period>
+                    <charges>100.00</charges>
+                    <outstanding>300.00</outstanding>
+                    <dueDate>2018-07-25</dueDate>
+                </bill>
+                <bill>
+                    <billDate>2018-06-01</billDate>
+                    <period>2018-06</period>
+                    <charges>100.00</charges>
+                    <outstanding>200.00</outstanding>
+                    <dueDate>2018-06-25</dueDate>
+                </bill>
+                <bill>
+                    <billDate>2018-05-01</billDate>
+                    <period>2018-05</period>
+                    <charges>100.00</charges>
+                    <outstanding>100.00</outstanding>
+                    <dueDate>2018-05-25</dueDate>
+                </bill>
+            </bills>
+        </account>
+    </statement>
+</statements>

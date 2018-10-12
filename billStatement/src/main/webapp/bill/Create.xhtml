@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="BillCreateDlg" widgetVar="BillCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateBillTitle}">
+            <h:form id="BillCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{billController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateBillLabel_billDueDate}" for="billDueDate" />
+                        <p:calendar id="billDueDate" pattern="MM/dd/yyyy" value="#{billController.selected.billDueDate}" title="#{bundle.EditBillTitle_billDueDate}" required="true" requiredMessage="#{bundle.EditBillRequiredMessage_billDueDate}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreateBillLabel_billDate}" for="billDate" />
+                        <p:calendar id="billDate" pattern="MM/dd/yyyy" value="#{billController.selected.billDate}" title="#{bundle.EditBillTitle_billDate}" required="true" requiredMessage="#{bundle.EditBillRequiredMessage_billDate}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreateBillLabel_billCharges}" for="billCharges" />
+                        <p:inputText id="billCharges" value="#{billController.selected.billCharges}" title="#{bundle.CreateBillTitle_billCharges}" required="true" requiredMessage="#{bundle.CreateBillRequiredMessage_billCharges}"/>
+                        <p:outputLabel value="#{bundle.CreateBillLabel_billOutstanding}" for="billOutstanding" />
+                        <p:inputText id="billOutstanding" value="#{billController.selected.billOutstanding}" title="#{bundle.CreateBillTitle_billOutstanding}" required="true" requiredMessage="#{bundle.CreateBillRequiredMessage_billOutstanding}"/>
+                        <p:outputLabel value="#{bundle.CreateBillLabel_billPeriod}" for="billPeriod" />
+                        <p:inputText id="billPeriod" value="#{billController.selected.billPeriod}" title="#{bundle.CreateBillTitle_billPeriod}" required="true" requiredMessage="#{bundle.CreateBillRequiredMessage_billPeriod}"/>
+                        <p:outputLabel value="#{bundle.CreateBillLabel_accountId}" for="accountId" />
+                        <p:selectOneMenu id="accountId" value="#{billController.selected.accountId}" required="true" requiredMessage="#{bundle.EditBillRequiredMessage_accountId}">
+                            <f:selectItems value="#{accountController.itemsAvailableSelectOne}"
+                                           var="accountIdItem" itemLabel="#{accountIdItem.accountNo}"
+                                           itemValue="#{accountIdItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{billController.create}" value="#{bundle.Save}" update="display,:BillListForm:datalist,:growl" oncomplete="handleSubmit(args,'BillCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="BillCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

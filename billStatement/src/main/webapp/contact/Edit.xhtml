@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ContactEditDlg" widgetVar="ContactEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditContactTitle}">
+            <h:form id="ContactEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{contactController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditContactLabel_id}" for="id" />
+                        <p:inputText id="id" value="#{contactController.selected.id}" title="#{bundle.EditContactTitle_id}" required="true" requiredMessage="#{bundle.EditContactRequiredMessage_id}"/>
+                        <p:outputLabel value="#{bundle.EditContactLabel_phoneHome}" for="phoneHome" />
+                        <p:inputText id="phoneHome" value="#{contactController.selected.phoneHome}" title="#{bundle.EditContactTitle_phoneHome}" required="true" requiredMessage="#{bundle.EditContactRequiredMessage_phoneHome}"/>
+                        <p:outputLabel value="#{bundle.EditContactLabel_phoneMobile}" for="phoneMobile" />
+                        <p:inputText id="phoneMobile" value="#{contactController.selected.phoneMobile}" title="#{bundle.EditContactTitle_phoneMobile}" required="true" requiredMessage="#{bundle.EditContactRequiredMessage_phoneMobile}"/>
+                        <p:outputLabel value="#{bundle.EditContactLabel_phoneWork}" for="phoneWork" />
+                        <p:inputText id="phoneWork" value="#{contactController.selected.phoneWork}" title="#{bundle.EditContactTitle_phoneWork}" required="true" requiredMessage="#{bundle.EditContactRequiredMessage_phoneWork}"/>
+                        <p:outputLabel value="#{bundle.EditContactLabel_accountId}" for="accountId" />
+                        <p:selectOneMenu id="accountId" value="#{contactController.selected.accountId}" required="true" requiredMessage="#{bundle.EditContactRequiredMessage_accountId}">
+                            <f:selectItem itemLabel="#{bundle.SelectOneMessage}"/>
+                            <f:selectItems value="#{accountController.itemsAvailableSelectOne}"
+                                           var="accountIdItem"
+                                           itemValue="#{accountIdItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{contactController.update}" value="#{bundle.Save}" update="display,:ContactListForm:datalist,:growl" oncomplete="handleSubmit(args, 'ContactEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="ContactEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

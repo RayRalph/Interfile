@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="BillViewDlg" widgetVar="BillViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewBillTitle}">
+            <h:form id="BillViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{billController.selected != null}">
+                        <h:outputText value="#{bundle.ViewBillLabel_billDueDate}"/>
+                        <h:outputText value="#{billController.selected.billDueDate}" title="#{bundle.ViewBillTitle_billDueDate}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewBillLabel_billDate}"/>
+                        <h:outputText value="#{billController.selected.billDate}" title="#{bundle.ViewBillTitle_billDate}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewBillLabel_billCharges}"/>
+                        <h:outputText value="#{billController.selected.billCharges}" title="#{bundle.ViewBillTitle_billCharges}"/>
+                        <h:outputText value="#{bundle.ViewBillLabel_billOutstanding}"/>
+                        <h:outputText value="#{billController.selected.billOutstanding}" title="#{bundle.ViewBillTitle_billOutstanding}"/>
+                        <h:outputText value="#{bundle.ViewBillLabel_billPeriod}"/>
+                        <h:outputText value="#{billController.selected.billPeriod}" title="#{bundle.ViewBillTitle_billPeriod}"/>
+                        <h:outputText value="#{bundle.ViewBillLabel_accountId}"/>
+                        <h:outputText value="#{billController.selected.accountId.accountNo}" title="#{bundle.ViewBillTitle_accountId}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="BillViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
